@@ -1,0 +1,30 @@
+.categories {
+  margin-bottom: 40px;
+
+  .List {
+    display: flex;
+  }
+
+  .Item {
+    padding: 8px 15px;
+    border-radius: 25px;
+    background: white;
+    margin-right: 30px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.4s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.Active {
+      background: black;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,53 @@
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.number {
+  font-size: 30px;
+  margin: 0 10px;
+}
+
+.counterBtn {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  transition: 0.4s;
+  will-change: transform;
+  font-size: 16px;
+  position: relative;
+  background: red;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: black;
+    left: 38%;
+    top: 50%;
+  }
+
+  &:last-child {
+    background: greenyellow;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 10px;
+      background: black;
+      left: 48%;
+      top: 31%;
+    }
+  }
+
+  &:hover {
+    opacity: 0.6;
+    scale: 1.04;
+  }
+}

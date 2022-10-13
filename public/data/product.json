@@ -1,0 +1,110 @@
+[
+  {
+    "items": [
+      {
+        "id": "1",
+        "imgSrc": "../img/popular/13.png",
+        "model": "Iphone 13",
+        "category": "Iphone 13",
+        "count": 4,
+        "specification": {
+          "model": " iphone 13",
+          "year": " 2021",
+          "ram": 4,
+          "memory": " 128 GB",
+          "display": " 6.1 OLED",
+          "oc": " iOS 15",
+          "nfc": " Модуль NFC с поддержкой режима считывания",
+          "price": 1829
+        }
+      },
+      {
+        "id": "2",
+        "imgSrc": "../img/popular/13pro.png",
+        "model": "Iphone 13 Pro",
+        "category": "Iphone 13 Pro",
+        "count": 4,
+        "specification": {
+          "model": " iphone 13 PRO",
+          "year": " 2021",
+          "ram": 6,
+          "memory": " 512 GB",
+          "display": " 6.1 OLED",
+          "oc": " iOS 15",
+          "nfc": " Модуль NFC с поддержкой режима считывания",
+          "price": 8629
+        }
+      },
+      {
+        "id": "3",
+        "imgSrc": "../img/popular/13max.png",
+        "model": "Iphone 13 Pro Max",
+        "count": 4,
+        "specification": {
+          "model": " iphone 13 PRO MAX",
+          "year": " 2021",
+          "ram": 6,
+          "memory": " 512 GB",
+          "display": " 6.7 OLED",
+          "oc": " iOS 15",
+          "nfc": " Модуль NFC с поддержкой режима считывания",
+          "price": 8289
+        }
+      },
+      {
+        "id": "4",
+        "imgSrc": "../img/popular/13pro.png",
+        "model": "Iphone 13 Pro",
+        "category": "Iphone 13 Pro",
+        "count": 4,
+        "specification": {
+          "model": " iphone 13 PRO",
+          "year": " 2021",
+          "ram": 6,
+          "memory": " 512 GB",
+          "display": " 6.1 OLED",
+          "oc": " iOS 15",
+          "nfc": " Модуль NFC с поддержкой режима считывания",
+          "price": 1241
+        }
+      },
+      {
+        "id": "5",
+        "imgSrc": "../img/popular/13max.png",
+        "model": "Iphone 13 Pro Max",
+        "category": "Iphone 13 Pro Max",
+        "count": 4,
+        "specification": {
+          "model": " iphone 13 PRO MAX",
+          "year": " 2021",
+          "ram": 6,
+          "memory": " 512 GB",
+          "display": " 6.7 OLED",
+          "oc": " iOS 15",
+          "nfc": " Модуль NFC с поддержкой режима считывания",
+          "price": 1241
+        }
+      },
+      {
+        "id": "6",
+        "imgSrc": "../img/popular/13.png",
+        "model": "Iphone 13",
+        "category": "Iphone 13",
+        "count": 4,
+        "specification": {
+          "model": " iphone 13",
+          "year": " 2021",
+          "ram": 4,
+          "memory": " 128 GB",
+          "display": " 6.1 OLED",
+          "oc": " iOS 15",
+          "nfc": " Модуль NFC с поддержкой режима считывания",
+          "price": 1241
+        }
+      }
+    ],
+    "totalCount": 6,
+    "pageSize": 6,
+    "pageNumber": 1
+  }
+]

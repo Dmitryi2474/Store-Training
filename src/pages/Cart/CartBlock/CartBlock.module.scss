@@ -1,0 +1,24 @@
+.item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+}
+
+.img {
+  width: 150px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Price {
+  color: white;
+  font-size: 29px;
+}

@@ -1,0 +1,44 @@
+.button {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: transparent;
+  font-family: "Montserrat", sans-serif;
+  background: white;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 10px 5px darkgrey;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.5)
+    );
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+  }
+
+  &:hover {
+    background-color: #fe6637;
+    box-shadow: 0 0 10px 5px rgb(236, 112, 39);
+
+    &::before {
+      left: 150px;
+      transition: 0.5s ease-in-out;
+    }
+  }
+
+  .text  {
+    font-size: 18px;
+  }
+}

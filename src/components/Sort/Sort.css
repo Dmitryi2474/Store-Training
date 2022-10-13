@@ -1,0 +1,50 @@
+.sort__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.sort__list-item {
+  margin-right: 30px;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  will-change: transform;
+  text-transform: uppercase;
+}
+
+.sort__list-item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.sort__list-item:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+  will-change: transform;
+}
+
+.sort__list-item:hover::after {
+  content: "";
+  width: 100%;
+  left: 0;
+}
+
+.sort__list-item:last-child {
+  margin-right: 0;
+}
+/*# sourceMappingURL=Sort.css.map */

@@ -1,0 +1,225 @@
+
+
+.product {
+  @media (min-width: $media1200) {
+    display: flex;
+  }
+
+  &__wrapper-swiper {
+    padding-bottom: 15px;
+
+    @media (min-width: $media1200) {
+      width: 50%;
+    }
+  }
+
+  &__item {
+    img {
+      border-radius: 10px;
+
+      @media (min-width: $media1200) {
+        width: 80px;
+      }
+    }
+  }
+
+  &__form {
+    @media (min-width: $media1200) {
+      width: 50%;
+    }
+  }
+
+  &__name {
+    opacity: 0.6;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__article-wrapper {
+    max-width: 170px;
+    opacity: 0.6;
+    margin-bottom: 15px;
+  }
+
+  &__rating-wrapper {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__rating {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    margin-right: 6px;
+  }
+
+  &__stars {
+    margin-right: 8px;
+    padding-top: 6px;
+  }
+
+  &__description {
+    margin-bottom: 25px;
+  }
+
+  &__radiobtn {
+    display: flex;
+    margin-bottom: 25px;
+  }
+
+  &__radiobtn-color {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 33px;
+    width: 33px;
+    border: 1px solid #fff;
+    margin-right: 15px;
+    background-color: red;
+  }
+
+  &__select {
+    margin-bottom: 20px;
+
+    @media (min-width: $media1200) {
+      display: flex;
+    }
+  }
+
+  &__select-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+    @media (min-width: $media1200) {
+      padding-right: 20px;
+    }
+
+    span {
+      padding-bottom: 5px;
+    }
+
+    select {
+      background: $c-gray;
+      border-radius: 5px;
+      color: #fff;
+      padding: 15px 10px;
+      cursor: pointer;
+    }
+  }
+
+  .star-full {
+    display: inline-block;
+    background-image: url("../../../public/img/testimonials/Star.svg");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+  }
+
+  .counter-inner {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .counter-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .number {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .counter-sale {
+    span {
+      font-size: 25px;
+      padding-right: 20px;
+      font-weight: bold;
+      color: greenyellow;
+
+      &:last-child {
+        font-size: 20px;
+        position: relative;
+        color: #fff;
+  
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 5px;
+          top: 10px;
+          left: 0;
+          background: #F48121;
+          transform: rotate(-12deg);
+        }
+      }
+    }
+  }
+
+  .counter-btn {
+    width: 40px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+    background: #676a6f;
+    border-radius: 5px;
+    position: relative;
+    margin-right: 15px;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      width: 15px;
+      height: 2px;
+      background-color: #fff;
+    }
+
+    &:last-child {
+      margin-left: 15px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 16px;
+        width: 2px;
+        height: 15px;
+        background-color: #fff;
+      }
+    }
+  }
+
+  &__btn-wrapper {
+    @media (min-width: $media1200) {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .btn {
+    margin-bottom: 20px;
+    @media (min-width: $media1200) {
+      width: 200px;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
+
+  .product-link {
+    text-align: center;
+  }
+
+  .link {
+    font-size: 18px;
+  }
+}

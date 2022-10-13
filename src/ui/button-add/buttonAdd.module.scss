@@ -1,0 +1,91 @@
+.ButtonAdd {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  padding: 5px 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: transparent;
+  font-family: "Montserrat", sans-serif;
+  background: white;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 10px 5px darkgrey;
+  font-size: 18px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.5)
+    );
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: -8px;
+    left: -75px;
+    transform: skewX(-45deg);
+  }
+
+  &:hover {
+    background: #7bda00;
+
+    &::before {
+      left: 150px;
+      transition: 0.5s ease-in-out;
+    }
+  }
+}
+
+.Checked {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 86px;
+  height: 31px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: transparent;
+  font-family: "Montserrat", sans-serif;
+  background: white;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 0 10px 5px darkgrey;
+  font-size: 18px;
+  cursor: pointer;
+  will-change: transform;
+  transition: 0.4s;
+  background-color: #7bda00;
+  box-shadow: 0 0 5px 3px rgb(111, 207, 0);
+
+  .Link {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      left: 35px;
+      transform: rotate(117deg);
+      top: -3px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 3px;
+      top: 2px;
+      left: 30px;
+      background-color: black;
+      transform: rotate(48deg);
+    }
+  }
+
+  span {
+    display: none;
+  }
+}

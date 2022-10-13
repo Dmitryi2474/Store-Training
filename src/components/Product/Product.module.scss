@@ -1,0 +1,87 @@
+.Product {
+  padding-bottom: 80px;
+
+  .List {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    justify-content: center;
+    will-change: transform;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .Item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.4s;
+    max-width: 480px;
+    font-size: 18px;
+
+    &:hover {
+      transform: scale(1.04);
+      box-shadow: 0 10px 10px 5px darkgrey;
+      transform: translateY(-15px);
+    }
+  }
+
+  .Add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .Img {
+    width: 100%;
+  }
+
+  .Text {
+    font-size: 20px;
+  }
+}
+
+.PopupProduct {
+  .PopupImg {
+    max-width: 500px;
+  }
+
+  .PopupList {
+    padding: 20px;
+    background-color: white;
+    border-radius: 25px;
+    text-align: left;
+    font-size: 18px;
+    box-shadow: 0 0 10px 10px darkgrey;
+  }
+
+  .PopupItem {
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      padding: 3px;
+      border-radius: 50%;
+      background-color: black;
+      left: -15px;
+      top: 7px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
