@@ -1,3 +1,5 @@
+@import '/static/scss/mixins';
+
 .header {
   padding: 50px 0;
   margin-bottom: 50px;
@@ -6,6 +8,21 @@
   .nav_block {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+
+    .Logo {
+      transition: opacity 0.2s ease;
+      display: block;
+      width: 100%;
+      max-width: 1760px;
+  
+      &:hover {
+        opacity: 0.67;
+      }
+  
+      &.active {
+        pointer-events: none;
+      }
+    }
   }
 }

@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import Skeleton from "../../components/Skeleton/Skeleton";
-import Product from "../../components/Product/Product";
-import Layout from "../../components/Layout/Layout";
-import Categories from "../../components/Categories/Categories";
+import Skeleton from '../../components/Skeleton/Skeleton';
+import Product from '../../components/Product/Product';
+import Layout from '../../components/Layout/Layout';
+import Categories from '../../components/Categories/Categories';
 
-const Home = (props) => {
+const Home = () => {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [currentCategory, setCurrentCategory] = useState("All");
+  const [currentCategory, setCurrentCategory] = useState('All');
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:3000/data/product.json")
+    fetch('data/product.json')
       .then((res) => res.json())
       .then((arr) => {
         setItems(arr);

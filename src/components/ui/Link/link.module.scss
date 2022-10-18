@@ -1,0 +1,11 @@
+@import '/static/scss/mixins';
+
+.Btn {
+    color: $c-orange;
+    transition: 0.4s;
+    will-change: transform;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}

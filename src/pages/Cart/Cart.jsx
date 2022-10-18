@@ -1,12 +1,11 @@
-import React from "react";
-import Layout from "../../components/Layout/Layout";
-import CartBlock from "./CartBlock/CartBlock";
+import React from 'react';
+import Layout from '../../components/Layout/Layout';
+import CartBlock from './CartBlock/CartBlock';
 
 const Cart = () => {
-
   return (
     <Layout>
-      <CartBlock/>
+      <CartBlock />
     </Layout>
   );
 };

@@ -1,3 +1,5 @@
+@import '/static/scss/mixins';
+
 .Product {
   padding-bottom: 80px;
 
@@ -22,7 +24,7 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-color: white;
+    background-color: $c-white;
     border-radius: 25px;
     cursor: pointer;
     transition: 0.4s;
@@ -54,11 +56,12 @@
 .PopupProduct {
   .PopupImg {
     max-width: 500px;
+    width: 100%;
   }
 
   .PopupList {
     padding: 20px;
-    background-color: white;
+    background-color: $c-white;
     border-radius: 25px;
     text-align: left;
     font-size: 18px;
@@ -69,16 +72,8 @@
     position: relative;
     margin-bottom: 15px;
     margin-left: 15px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      padding: 3px;
-      border-radius: 50%;
-      background-color: black;
-      left: -15px;
-      top: 7px;
-    }
+    padding-left: 10px;
+    list-style: auto;
 
     &:last-child {
       margin-bottom: 0px;

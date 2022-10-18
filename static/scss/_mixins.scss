@@ -1,0 +1,40 @@
+@import 'conf';
+
+@mixin fontsize_default() {
+  font-size: 16px;
+  @media (min-width: $media1200) {
+    font-size: 20px;
+  }
+}
+
+@mixin fontsize_decorative() {
+  font-size: 20px;
+  @media (min-width: $media768) {
+    font-size: 28px;
+  }
+  @media (min-width: $media1200) {
+    font-size: 34px;
+  }
+}
+
+@mixin fontsize_h1() {
+  font-size: 40px;
+  @media (min-width: $media768) {
+    font-size: 50px;
+  }
+  @media (min-width: $media1200) {
+    font-size: 60px;
+  }
+}
+
+@mixin font_default() {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font_decorative() {
+  font-family: 'Merienda';
+  font-style: italic;
+  font-weight: 400;
+}

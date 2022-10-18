@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useContext } from "react";
-import CartContext from "../../context/CartContext";
-import ButtonAdd from "../../ui/button-add/buttonAdd";
+import React, { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import CartContext from '../../context/CartContext';
 
-import Popup from "../Popup/Popup";
-import classes from "./Product.module.scss";
+import Popup from '../Popup/Popup';
+import classes from './Product.module.scss';
+import ButtonAdd from '../ui/buttonAdd/buttonAdd';
 
 const Product = ({ items, currentCategory }) => {
   const [productList, setProductList] = useState([]);
@@ -18,7 +18,7 @@ const Product = ({ items, currentCategory }) => {
   };
 
   const categoryHandler = (currentCategory) => {
-    if (currentCategory === "All") {
+    if (currentCategory === 'All') {
       setProductList(items);
     } else {
       setProductList(items.filter((item) => item.category === currentCategory));
@@ -27,7 +27,7 @@ const Product = ({ items, currentCategory }) => {
 
   const addHandler = (item) => {
     let newCart;
-    
+
     if (cart.cartItems.find((current) => current.id === item.id)) {
       let index = cart.cartItems.findIndex((current) => current.id === item.id);
 
@@ -82,9 +82,9 @@ const Product = ({ items, currentCategory }) => {
           ? productList.map((item) => {
               return (
                 <li className={classes.Item} key={item.id}>
-                  <div onClick={() => clickHandler(item)}>
+                  <button onClick={() => clickHandler(item)}>
                     <img className={classes.Img} src={item.imgSrc} alt=""></img>
-                  </div>
+                  </button>
                   <div className={classes.Add}>
                     <span
                       onClick={() => clickHandler(item)}
@@ -117,23 +117,23 @@ const Product = ({ items, currentCategory }) => {
               </li>
               <li className={classes.PopupItem}>
                 <span>
-                  PRODUCTION YEAR :{currentProduct.specification.year}
+                  PRODUCTION YEAR : {currentProduct.specification.year}
                 </span>
               </li>
               <li className={classes.PopupItem}>
-                <span>RAM :{currentProduct.specification.ram}</span>
+                <span>RAM : {currentProduct.specification.ram}</span>
               </li>
               <li className={classes.PopupItem}>
-                <span>MEMORY :{currentProduct.specification.memory}</span>
+                <span>MEMORY : {currentProduct.specification.memory}</span>
               </li>
               <li className={classes.PopupItem}>
-                <span>DISPLAY :{currentProduct.specification.display}</span>
+                <span>DISPLAY : {currentProduct.specification.display}</span>
               </li>
               <li className={classes.PopupItem}>
-                <span>OC :{currentProduct.specification.oc}</span>
+                <span>OC : {currentProduct.specification.oc}</span>
               </li>
               <li className={classes.PopupItem}>
-                <span>NFC :{currentProduct.specification.nfc}</span>
+                <span>NFC : {currentProduct.specification.nfc}</span>
               </li>
             </ul>
           </Popup>

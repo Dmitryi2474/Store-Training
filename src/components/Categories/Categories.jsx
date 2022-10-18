@@ -1,4 +1,5 @@
 import React from "react";
+
 import classes from "./Categories.module.scss";
 
 const Categories = ({ currentCategory, setCurrentCategory }) => {
@@ -9,11 +10,10 @@ const Categories = ({ currentCategory, setCurrentCategory }) => {
       <ul className={classes.List}>
         {categories.map((categoryName, index) => (
           <li
-            className={currentCategory === categoryName ? `${classes.Item} ${classes.Active}` : classes.Item}
-            onClick={() => setCurrentCategory(categoryName)}
+            className={classes.Item}
             key={index}
           >
-            {categoryName}
+            <button  className={currentCategory === categoryName ? `${classes.Btn} ${classes.Active}` : classes.Btn} onClick={() => setCurrentCategory(categoryName)}> {categoryName}</button>
           </li>
         ))}
       </ul>

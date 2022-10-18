@@ -3,12 +3,12 @@
     "items": [
       {
         "id": "1",
-        "imgSrc": "../img/popular/13.png",
+        "imgSrc": "/img/phoneImg/13.png",
         "model": "Iphone 13",
         "category": "Iphone 13",
         "count": 4,
         "specification": {
-          "model": " iphone 13",
+          "model": " Iphone 13",
           "year": " 2021",
           "ram": 4,
           "memory": " 128 GB",
@@ -20,12 +20,12 @@
       },
       {
         "id": "2",
-        "imgSrc": "../img/popular/13pro.png",
+        "imgSrc": "/img/phoneImg/13pro.png",
         "model": "Iphone 13 Pro",
         "category": "Iphone 13 Pro",
         "count": 4,
         "specification": {
-          "model": " iphone 13 PRO",
+          "model": " Iphone 13 PRO",
           "year": " 2021",
           "ram": 6,
           "memory": " 512 GB",
@@ -37,11 +37,11 @@
       },
       {
         "id": "3",
-        "imgSrc": "../img/popular/13max.png",
+        "imgSrc": "/img/phoneImg/13max.png",
         "model": "Iphone 13 Pro Max",
         "count": 4,
         "specification": {
-          "model": " iphone 13 PRO MAX",
+          "model": " Iphone 13 PRO MAX",
           "year": " 2021",
           "ram": 6,
           "memory": " 512 GB",
@@ -53,12 +53,12 @@
       },
       {
         "id": "4",
-        "imgSrc": "../img/popular/13pro.png",
+        "imgSrc": "/img/phoneImg/13pro.png",
         "model": "Iphone 13 Pro",
         "category": "Iphone 13 Pro",
         "count": 4,
         "specification": {
-          "model": " iphone 13 PRO",
+          "model": " Iphone 13 PRO",
           "year": " 2021",
           "ram": 6,
           "memory": " 512 GB",
@@ -70,12 +70,12 @@
       },
       {
         "id": "5",
-        "imgSrc": "../img/popular/13max.png",
+        "imgSrc": "/img/phoneImg/13max.png",
         "model": "Iphone 13 Pro Max",
         "category": "Iphone 13 Pro Max",
         "count": 4,
         "specification": {
-          "model": " iphone 13 PRO MAX",
+          "model": " Iphone 13 PRO MAX",
           "year": " 2021",
           "ram": 6,
           "memory": " 512 GB",
@@ -87,12 +87,12 @@
       },
       {
         "id": "6",
-        "imgSrc": "../img/popular/13.png",
+        "imgSrc": "/img/phoneImg/13.png",
         "model": "Iphone 13",
         "category": "Iphone 13",
         "count": 4,
         "specification": {
-          "model": " iphone 13",
+          "model": " Iphone 13",
           "year": " 2021",
           "ram": 4,
           "memory": " 128 GB",
