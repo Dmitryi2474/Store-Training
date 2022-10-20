@@ -16,23 +16,23 @@
     transition: 0.5s;
     padding: 020px;
     text-align: center;
-  
+
     &.Active {
       opacity: 1;
       pointer-events: all;
       backdrop-filter: blur(4px);
       z-index: 5;
     }
-  
+
     .Content {
       position: relative;
-  
+
       @media (min-width: $media1200) {
         display: flex;
         align-items: center;
       }
     }
-  
+
     .Close {
       font-size: 25px;
       cursor: pointer;
@@ -41,19 +41,18 @@
       left: 85%;
       transition: transform 0.2s;
       color: $c-white;
-  
+
       @media (min-width: $media768) {
         left: 95%;
       }
-  
+
       @media (min-width: $media1200) {
         left: 100%;
       }
-  
+
       &:hover {
         transform: scale(1.5);
       }
     }
   }
- 
 }
