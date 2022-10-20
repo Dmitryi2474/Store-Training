@@ -82,9 +82,36 @@ const Product = ({ items, currentCategory }) => {
           ? productList.map((item) => {
               return (
                 <li className={classes.Item} key={item.id}>
-                  <button onClick={() => clickHandler(item)}>
-                    <img className={classes.Img} src={item.imgSrc} alt=""></img>
-                  </button>
+                  <div className={classes.ImgWrapper}>
+                  <ul className={classes.ListHover}>
+                    <h2 className={classes.Header}>{item.model}</h2>
+                    <li className={classes.ItemHover}>
+                      <span>PRODUCTION YEAR : {item.specification.year}</span>
+                    </li>
+                    <li className={classes.ItemHover}>
+                      <span>RAM : {item.specification.ram}</span>
+                    </li>
+                    <li className={classes.ItemHover}>
+                      <span>MEMORY : {item.specification.memory}</span>
+                    </li>
+                    <li className={classes.ItemHover}>
+                      <span>DISPLAY : {item.specification.display}</span>
+                    </li>
+                    <li className={classes.ItemHover}>
+                      <span>OC : {item.specification.oc}</span>
+                    </li>
+                    <li className={classes.ItemHover}>
+                      <span>NFC : {item.specification.nfc}</span>
+                    </li>
+                  </ul>
+                    <button onClick={() => clickHandler(item)}>
+                      <img
+                        className={classes.Img}
+                        src={item.imgSrc}
+                        alt=""
+                      ></img>
+                    </button>
+                  </div>
                   <div className={classes.Add}>
                     <span
                       onClick={() => clickHandler(item)}
@@ -97,6 +124,8 @@ const Product = ({ items, currentCategory }) => {
                       text="+ Add"
                     />
                   </div>
+
+               
                 </li>
               );
             })

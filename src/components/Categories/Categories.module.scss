@@ -1,20 +1,25 @@
-@import "/static/scss/mixins";
+@import '/static/scss/mixins';
 
 .categories {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+
+
 
   .List {
     display: flex;
     overflow: auto;
+    padding-bottom: 20px;
+
+    &::-webkit-scrollbar {
+      height: 2px;
+      width: 7px!important;
+    }
+
+
   }
 
   .Item {
     margin-right: 30px;
-    transition: 0.4s;
-
-    &:hover {
-      opacity: 0.5;
-    }
 
     &:last-child {
       margin-right: 0;
@@ -22,16 +27,34 @@
   }
 
   .Btn {
-    padding: 8px 15px;
-    border-radius: 25px;
-    border: none;
-    background: $c-white;
+    pointer-events: auto;
     cursor: pointer;
+    background: $c-white;
     border: none;
+    padding: 0.3rem 1rem;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    transition: 0.4s;
+    border-radius: 15px;
+    white-space: nowrap;
+
+    &:hover {
+      color: $c-white;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 40px #000;
+      transition-delay: 0s, 0s, 0.2s;
+    }
 
     &.Active {
-      background: black;
       color: $c-white;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 40px #000;
+      transition-delay: 0s, 0s, 0.2s;
+    }
+
+    @media (min-width: $media768) {
+      padding: 0.5rem 1.5rem;
     }
   }
 }

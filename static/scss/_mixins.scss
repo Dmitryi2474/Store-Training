@@ -2,8 +2,8 @@
 
 @mixin fontsize_default() {
   font-size: 16px;
-  @media (min-width: $media1200) {
-    font-size: 20px;
+  @media (min-width: $media768) {
+    font-size: 18px;
   }
 }
 

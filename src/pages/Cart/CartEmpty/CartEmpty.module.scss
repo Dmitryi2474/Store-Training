@@ -9,10 +9,12 @@
   .Title {
     @include font_decorative;
     @include fontsize_h1;
+    margin-bottom: 20px
   }
 
   .SubTitle {
     @include fontsize_decorative;
+    margin-bottom: 20px
   }
 
   .ContentWrapper {

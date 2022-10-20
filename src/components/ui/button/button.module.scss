@@ -4,7 +4,7 @@
   text-decoration: none;
   outline: none;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 8px 15px;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
@@ -42,6 +42,6 @@
   }
 
   @media (min-width: $media768) {
-    padding: 8 30px;
+    padding: 10px 30px;
   }
 }
