@@ -8,10 +8,7 @@ import CartContext from '../context/CartContext';
 import './App.scss';
 
 const App = () => {
-  const [cart, setCart] = useState({
-    cartItems: [],
-    total: 0,
-  });
+  const [cart, setCart] = useState([]);
 
   return (
     <CartContext.Provider value={{ cart, setCart }}>

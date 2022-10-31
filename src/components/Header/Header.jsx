@@ -7,19 +7,17 @@ import classes from './Header.module.scss';
 
 const Header = (active) => {
   return (
-    <div className={classes.header}>
+    <section id='part1' className={classes.header}>
       <div className={classes.nav_block}>
         <Link
           to="/"
-          className={
-            active ? `${classes.Logo} ${classes.Active}` : classes.Logo
-          }
+          className={active ? `${classes.Logo} ${classes.Active}` : classes.Logo}
         >
           <Logo />
         </Link>
         <Button href={'/cart'} text="Basket" />
       </div>
-    </div>
+    </section>
   );
 };
 

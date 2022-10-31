@@ -1,4 +1,7 @@
-@import "/static/scss/mixins";
+@import '/static/scss/mixins';
+html {
+  scroll-behavior: smooth;
+}
 
 .app-wrapper {
   display: block;
@@ -40,6 +43,7 @@ body {
   background-repeat: no-repeat;
   @include font_default;
   @include fontsize_default;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

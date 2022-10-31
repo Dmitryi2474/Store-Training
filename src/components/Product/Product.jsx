@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { useContext } from 'react';
-import CartContext from '../../context/CartContext';
 
 import Popup from '../Popup/Popup';
 import classes from './Product.module.scss';
 import ButtonAdd from '../ui/buttonAdd/buttonAdd';
 
 const Product = ({ items, currentCategory }) => {
+  const [cart, setCart] = useState(null);
   const [productList, setProductList] = useState([]);
   const [currentProduct, setCurrentProduct] = useState({});
   const [popupActive, setPopupActive] = useState(false);
-  const { cart, setCart } = useContext(CartContext);
+
+  useEffect(() => {
+      const items = JSON.parse(localStorage.getItem('Cart'));
+      setCart(items ? items : []);
+  }, []);
 
   const clickHandler = (index) => {
     setPopupActive(true);
@@ -26,48 +29,16 @@ const Product = ({ items, currentCategory }) => {
   };
 
   const addHandler = (item) => {
+    let CART = localStorage.getItem('Cart') || '[]';
+    CART = JSON.parse(CART);
+
     let newCart;
+    newCart = [...CART, item];
 
-    if (cart.cartItems.find((current) => current.id === item.id)) {
-      let index = cart.cartItems.findIndex((current) => current.id === item.id);
-
-      if (cart.cartItems[index].currentCount === item.count) {
-        return;
-      }
-
-      if (index === 0) {
-        newCart = {
-          cartItems: [
-            { ...item, currentCount: cart.cartItems[index].currentCount + 1 },
-            ...cart.cartItems.slice(1, cart.cartItems.length),
-          ],
-          total: cart.total + item.specification.price,
-        };
-      } else if (index === cart.cartItems.length - 1) {
-        newCart = {
-          cartItems: [
-            ...cart.cartItems.slice(0, index),
-            { ...item, currentCount: cart.cartItems[index].currentCount + 1 },
-          ],
-          total: cart.total + item.specification.price,
-        };
-      } else {
-        newCart = {
-          cartItems: [
-            ...cart.cartItems.slice(0, index),
-            { ...item, currentCount: cart.cartItems[index].currentCount + 1 },
-            ...cart.cartItems.slice(index + 1, cart.cartItems.length),
-          ],
-          total: cart.total + item.specification.price,
-        };
-      }
-    } else {
-      newCart = {
-        cartItems: [...cart.cartItems, { ...item, currentCount: 1 }],
-        total: cart.total + item.specification.price,
-      };
-    }
+    localStorage.setItem('Cart', JSON.stringify(newCart));
     setCart(newCart);
+
+    return newCart;
   };
 
   useEffect(() => {
@@ -76,7 +47,7 @@ const Product = ({ items, currentCategory }) => {
   }, [currentCategory]);
 
   return (
-    <div className={classes.Product}>
+    <section className={classes.Product}>
       <ul className={classes.List}>
         {productList
           ? productList.map((item) => {
@@ -122,10 +93,10 @@ const Product = ({ items, currentCategory }) => {
                     <ButtonAdd
                       clickHandler={() => addHandler(item)}
                       text="+ Add"
+                      id={item.id}
+                      cart={cart}
                     />
                   </div>
-
-               
                 </li>
               );
             })
@@ -168,7 +139,7 @@ const Product = ({ items, currentCategory }) => {
           </Popup>
         ) : null}
       </div>
-    </div>
+    </section>
   );
 };
 
